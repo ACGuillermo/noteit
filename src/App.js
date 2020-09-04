@@ -1,9 +1,10 @@
 import React from 'react';
+import Sidebar from './components/sidebar/Sidebar'
 
 function App() {
   return (
-    <div className="h-32 w-32 mx-auto bg-teal-600">
-      Hello
+    <div className="w-full h-full bg-gray-900">
+      <Sidebar />
     </div>
   );
 }

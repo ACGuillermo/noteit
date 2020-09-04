@@ -605,6 +605,22 @@ video {
   }
 }
 
+.border-r{
+  border-right-width: 10px;
+}
+
+.border-t{
+  border-top-width: 10px;
+}
+
+.border-l{
+  border-left-width: 10px;
+}
+
+.border-b{
+  border-bottom-width: 10px;
+}
+
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
