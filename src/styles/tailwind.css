@@ -15,4 +15,77 @@
 .border-b{
     border-bottom-width: 10px;
 }
+
+.punctuation{
+    color: #c3c3c3;
+}
+
+.table-header{
+    color: #000;
+}
+
+.url{
+    color: #032f62;
+}
+
+.url.content{
+    color: #0366d6;
+    text-decoration: underline;
+}
+
+.title .bold{
+    color: #000;
+}
+
+#area-editor{
+    -webkit-text-fill-color: transparent
+}
+
+pre{
+      margin: 0;
+      border: 0;
+      background: none;
+      box-sizing: inherit;
+      display: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-style: inherit;
+      font-variant-ligatures: inherit;
+      font-weight: inherit;
+      letter-spacing: inherit;
+      line-height: inherit;
+      tab-size: inherit;
+      text-indent: inherit;
+      text-rendering: inherit;
+      text-transform: inherit;
+      white-space: inherit;
+      overflow-wrap: inherit;
+      word-break: inherit;
+      word-break: normal;
+      padding: 0;
+}
+
+textarea{
+      margin: 0;
+      border: 0;
+      background: none;
+      box-sizing: inherit;
+      display: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-style: inherit;
+      font-variant-ligatures: inherit;
+      font-weight: inherit;
+      letter-spacing: inherit;
+      line-height: inherit;
+      tab-size: inherit;
+      text-indent: inherit;
+      text-rendering: inherit;
+      text-transform: inherit;
+      white-space: inherit;
+      overflow-wrap: inherit;
+      word-break: inherit;
+      word-break: normal;
+      padding: 0;
+}
 @tailwind utilities;
