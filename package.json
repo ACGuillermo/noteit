@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
+    "@tailwindcss/typography": "^0.2.0",
+    "marked": "^1.1.1",
     "prismjs": "^1.21.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
