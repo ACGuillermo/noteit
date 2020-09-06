@@ -37,7 +37,6 @@ const workspacesSlice = createSlice({
 
 export const {
     selectWorkspace,
-    testReducer
 } = workspacesSlice.actions
 
 export default workspacesSlice.reducer
