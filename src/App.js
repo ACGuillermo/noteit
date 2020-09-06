@@ -4,7 +4,7 @@ import Editor from './components/editor/Editor';
 
 function App() {
   return (
-    <div className="w-full h-full bg-gray-900 flex">
+    <div className="w-full h-full bg-white flex">
       <Sidebar />
       <Editor />
     </div>

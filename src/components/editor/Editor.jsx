@@ -1,42 +1,33 @@
-import React, { useState, useRef } from 'react';
-import Prism from 'prismjs';
-import 'prismjs/components/prism-markdown.js';
-
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { togglePreview } from '../../reducers/editor'
+import HTMLContent from './HTMLContent'
+import MarkdownContent from './MarkdownContent'
 
 const Editor = () => {
-    const [rawText, setRawText] = useState('')
-    const [highlightText, setHighlightText] = useState('')
-    const preRef = useRef(null)
-
-    const handleTextAreaChange = (e) => {
-        const highlight = Prism.highlight(e.target.value, Prism.languages.markdown, 'markdown');
-        setHighlightText(highlight)
-        setRawText(e.target.value)
-        
-    }
     
-    const setPreHTML = (html) =>{
-        return {__html: html}
-    }
+    const {showPreview} = useSelector(state => state.editor)
 
+    const dispatch = useDispatch()
+
+    const handlePreviewClick = () =>{
+        dispatch(togglePreview())
+    }
 
     return(
-        <div className="w-8/12 h-screen text-gray-300">
-            <div className="w-10/12 h-full mx-auto relative">
-                <pre className="relative m-0 text-md whitespace-pre-wrap" ref={preRef} dangerouslySetInnerHTML={setPreHTML(highlightText)}>
-                    
-                </pre>
-                <textarea
-                    id="area-editor"
-                    className="absolute h-full w-full top-0 left-0 bg-transparent outline-none text-md"
-                    spellCheck={false}
-                    onChange={handleTextAreaChange}
-                    value={rawText}
-                >
-
-                </textarea>
+        <>
+            <div className="w-8/12 h-screen text-gray-300 flex flex-col">
+                <div className="h-8 w-full bg-teal-300 flex items-center">
+                    <button className="bg-red-300" onClick={handlePreviewClick}>CLICK</button>
+                </div>
+                {showPreview
+                ? <HTMLContent />
+                : <MarkdownContent />
+                }
             </div>
-        </div>
+            
+        </>
+        
     )
 }
 
